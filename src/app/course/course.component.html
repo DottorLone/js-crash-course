@@ -1,72 +1,91 @@
 <div class="container">
     <h1 class="crash-course-title">JAVASCRIPT CRASH COURSE by DottorLone</h1>
     <iframe style="border-radius:12px; float:right" src="https://open.spotify.com/embed/playlist/56VLs2q2sF5QrIS408OJDy?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    
+    <hr>
     <button (click)="showDOMDescription()">Mostra 'O Documento'</button>
     <div *ngIf="domDescriptionVisible">
-        <p>Il Document Object Model (DOM) è una rappresentazione strutturata del contenuto di una pagina web. Ci permette di modificare, aggiungere o rimuovere elementi dalla pagina dinamicamente. Per esempio, cliccando sul tasto "Objects" qui sotto, useremo il DOM per creare due nuovi input sul tuo schermo, simulando la creazione dinamica di contenuti che potrebbe accompagnare il pezzo "Object" dei Cure.</p>
+        <p>Il Document Object Model (DOM) è una rappresentazione strutturata del contenuto di una pagina web. Ci permette di modificare, aggiungere o rimuovere elementi dalla pagina dinamicamente. Per esempio, cliccando sul tasto "Objects" qui sotto, useremo il DOM per creare due nuovi input sul tuo schermo, simulando la creazione dinamica di contenuti.</p>
         <p class="disclaimer">*Questo esempio utilizza manipolazione diretta del DOM, un approccio principalmente didattico. In applicazioni Angular reali, si preferisce l'utilizzo di tecniche come data binding e manipolazione del modello per mantenere l'applicazione più performante e mantenibile.</p>
+    </div>
+    <hr>
+    <div *ngIf="domDescriptionVisible">
       <button id="createInputsButton" (click)="createInputs()">Objects</button>
+      <p>Un oggetto in programmazione è una struttura dati che raggruppa valori eterogenei sotto un'unica identità, solitamente per rappresentare entità specifiche come persone, ordini o fatture. Ogni oggetto combina dati e funzionalità relative all'entità che rappresenta, facilitando la gestione e l'interazione con questi dati in maniera organizzata.</p>
+      
+      <div id="inputsContainer">
+      
+        <!-- Gli input di testo verranno creati qui tramite JavaScript -->
+      </div>
     </div>
-  
-    <div id="inputsContainer">
-      <!-- Gli input di testo verranno creati qui tramite JavaScript -->
-    </div>
-
+    <hr>
     <div *ngIf="showInputs">
-        <button (click)="showFunctionExplanation()">Function</button>
+      <button (click)="showFunctionExplanation()">Function</button>
         <p *ngIf="functionDescriptionVisible">In JavaScript, una 'Function' è un blocco di codice progettato per eseguire una particolare operazione. Viene eseguita quando "qualcosa" invoca (chiama) essa. 'Function' è anche un oggetto in JavaScript, il che significa che può avere proprietà e il suo comportamento può essere modificato.</p>
+        
         <div id="resultsContainer0">
             <!-- Gli input di testo verranno creati qui tramite JavaScript -->
           </div>
     </div>
-
+    <hr>
     <div *ngIf="showForEachButton">
-        <button (click)="forEachExample()">ForEach Loop</button>
+      <button (click)="forEachExample()">ForEach Loop</button>
+      <p>
+        Il forEach loop in JavaScript è un metodo che viene applicato agli array per eseguire una funzione su ciascun elemento dell'array stesso. Questo metodo è particolarmente utile per iterare su collezioni di dati in modo semplice e leggibile, evitando l'uso di cicli tradizionali come for o while.
+        
+        La funzione passata a forEach è chiamata per ogni elemento dell'array, ricevendo l'elemento corrente, l'indice di quell'elemento e l'array completo come argomenti</p>
+        
         <div id="resultsContainer1">
             <!-- Gli input di testo verranno creati qui tramite JavaScript -->
           </div>
     </div>
-
+    <hr>
     <div *ngIf="showPromiseButton">
-        <button (click)="promiseExample()">Promise</button>
-        <p *ngIf="showPromiseButton">Una 'Promise' in JavaScript è utilizzata per gestire operazioni asincrone...</p>
-        <div id="resultsContainer2">
+      <button (click)="promiseExample()">Promise</button>
+        <p *ngIf="showPromiseButton">Una Promise in JavaScript è un oggetto che rappresenta il risultato eventualmente disponibile di un'operazione asincrona. Questo meccanismo permette di gestire in modo più ordinato situazioni dove sono necessari tempi di attesa per dati provenienti, ad esempio, da un server web o da un processo di lettura di file. Una Promise può trovarsi in uno di questi tre stati:
+          Pending: lo stato iniziale, non è ancora noto se la promise sarà risolta o rifiutata.
+          Fulfilled: significa che l'operazione è completata con successo e la promise è risolta con un valore.
+          Rejected: indica che l'operazione è fallita, e la promise è rifiutata con un motivo di errore.
+          Questo modello di programmazione asincrona permette agli sviluppatori di scrivere codice che può attendere la risoluzione delle operazioni senza bloccare l'esecuzione del resto del programma. Le promesse possono essere concatenate e gestite attraverso i metodi .then(), .catch(), e .finally(), offrendo un controllo dettagliato sul flusso asincrono e migliorando la gestione degli errori rispetto ai tradizionali callback.</p>
+          
+          <div id="resultsContainer2">
             <!-- Gli input di testo verranno creati qui tramite JavaScript -->
           </div>
       </div>
-      
+      <hr>
       <div *ngIf="showCallbackButton">
         <button (click)="callbackExample()">Callbacks</button>
-        <p *ngIf="showCallbackButton">Una 'Callback' è una funzione passata a un'altra funzione come argomento...</p>
+        <p *ngIf="showCallbackButton">Una 'Callback' è una funzione che viene passata come argomento a un'altra funzione e che può essere invocata all'interno di quest'ultima per completare una specifica routine o azione. Questo modello è particolarmente utile in JavaScript per gestire situazioni asincrone, come la ricezione di dati da una rete o il completamento di operazioni di I/O, permettendo al codice di procedere senza attese, mentre l'operazione asincrona viene eseguita in background.</p>
+        
         <div id="resultsContainer3">
             <!-- Gli input di testo verranno creati qui tramite JavaScript -->
           </div>
       </div>
-      
+      <hr>
       <div *ngIf="showAsyncButton">
         <button (click)="asyncAwaitExample()">Async/Await</button>
-        <p *ngIf="showAsyncButton">'Async' e 'await' facilitano la scrittura di funzioni asincrone in modo più leggibile, simile a sincrono.</p>
+        <p *ngIf="showAsyncButton">Le parole chiave async e await in JavaScript modernizzano la gestione delle operazioni asincrone, rendendole più intuitive e simili a flussi di esecuzione sincroni. Un funzione dichiarata con async ritorna automaticamente una Promise, e all'interno di questa funzione, await può essere usato per mettere in pausa l'esecuzione finché una Promise non è risolta o rifiutata, semplificando notevolmente la sintassi rispetto all'uso delle Promises tradizionali.</p>
+        
         <div id="resultsContainer4">
             <!-- Gli input di testo verranno creati qui tramite JavaScript -->
           </div>
       </div>
-      
+      <hr>
       <div *ngIf="showUndefinedButton">
         <button (click)="showUndefinedExample()">Undefined</button>
-        <p *ngIf="showUndefinedButton">Il tipo 'undefined' in JavaScript indica che una variabile è stata dichiarata ma non è stata ancora assegnata a un valore...</p>
+        <p *ngIf="showUndefinedButton">In JavaScript, il tipo undefined rappresenta un valore speciale che viene automaticamente assegnato alle variabili che sono state dichiarate ma non ancora inizializzate. Questo significa che nessun valore esplicito è stato assegnato a tale variabile. undefined è anche il valore di ritorno di funzioni che non restituiscono esplicitamente qualcosa e l'output di espressioni che accedono a proprietà di oggetti non esistenti o a elementi di array non definiti.</p>
+        
         <div id="resultsContainer5">
             <!-- Gli input di testo verranno creati qui tramite JavaScript -->
           </div>
       </div>
-      
+      <hr>
       <div *ngIf="showConsoleLogButton">
         <button (click)="consoleLogExample()">Console.log</button>
-        <p *ngIf="showConsoleLogButton">Il metodo 'console.log()' è usato per stampare qualsiasi tipo di variabili o stato delle variabili in console...</p>
+        <p *ngIf="showConsoleLogButton">L'oggetto console in JavaScript fornisce accesso a una console di debugging che può essere utilizzata per stampare informazioni che aiutano nello sviluppo e nel debug del codice. Il metodo console.log() è uno dei più usati di questo oggetto e serve per stampare messaggi nella console del browser o dell'ambiente di esecuzione, come Node.js.Per migliorare la leggibilità dei messaggi di log, console.log() può essere combinato con stringhe di formattazione e altri metodi dell'oggetto console, come console.error(), console.warn() e console.info(), per differenziare i tipi di output a seconda della loro importanza o gravità.</p>
+        
         <div id="resultsContainer6">
             <!-- Gli input di testo verranno creati qui tramite JavaScript -->
           </div>
       </div>
-
-      
+      <hr>
 </div>
