@@ -1,0 +1,83 @@
+/* cyberpunk/wordart style */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+.crash-course-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  -webkit-background-clip: text;
+  background-clip: initial;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin: 20px 0;
+  animation: neon 10s ease-in-out infinite alternate;
+}
+
+/* Effetto di illuminazione neon per il titolo */
+@keyframes neon {
+  from {
+    text-shadow: 
+      0 0 0px #ff00cc,
+      0 0 20px #ff00cc,
+      0 0 30px #ff00cc,
+      0 0 40px #333399,
+      0 0 70px #333399,
+      0 0 80px #333399,
+      0 0 100px #333399,
+      0 0 150px #333399;
+  }
+  to {
+    text-shadow: 
+      0 0 5px #ff00cc,
+      0 0 10px #ff00cc,
+      0 0 15px #ff00cc,
+      0 0 20px #333399,
+      0 0 35px #333399,
+      0 0 40px #333399,
+      0 0 50px #333399,
+      0 0 75px #333399;
+  }
+}
+
+/* Stili per il pulsante */
+button {
+    background-color: #ff00cc; /* Colore rosa neon */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc; /* Effetto glow */
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #333399; /* Colore blu al passaggio del mouse */
+  }
+  
+  /* Container per i controlli input */
+  #inputsContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .disclaimer {
+    font-size: 0.8rem;  /* Riduci la dimensione del font per il disclaimer */
+    color: #cccccc;    /* Usa un colore più chiaro per diminuire l'impatto visivo */
+    margin-top: 10px;  /* Spazio dal contenuto sopra */
+  }
+
+  input[type="text"], input[type="number"] {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ff00cc;
+    border-radius: 4px;
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+  }
